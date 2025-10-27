@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE report PUBLIC "-//JACOCO//DTD Report 1.1//EN" "report.dtd"[]>
+<report name="Pester (10/27/2025 08:51:41)">
+  <sessioninfo id="this" start="1761555101536" dump="1761555101711" />
+  <package name="Scripts">
+    <class name="Scripts/convertCoordinates" sourcefilename="convertCoordinates.ps1">
+      <method name="ConvertFrom-XlsCoordinates" desc="()" line="11">
+        <counter type="INSTRUCTION" missed="0" covered="8" />
+        <counter type="LINE" missed="0" covered="6" />
+        <counter type="METHOD" missed="0" covered="1" />
+      </method>
+      <method name="Split_column_row" desc="()" line="31">
+        <counter type="INSTRUCTION" missed="0" covered="4" />
+        <counter type="LINE" missed="0" covered="3" />
+        <counter type="METHOD" missed="0" covered="1" />
+      </method>
+      <method name="Convert_to_ASCII" desc="()" line="40">
+        <counter type="INSTRUCTION" missed="0" covered="1" />
+        <counter type="LINE" missed="0" covered="1" />
+        <counter type="METHOD" missed="0" covered="1" />
+      </method>
+      <method name="Calculate_column_number" desc="()" line="44">
+        <counter type="INSTRUCTION" missed="0" covered="1" />
+        <counter type="LINE" missed="0" covered="1" />
+        <counter type="METHOD" missed="0" covered="1" />
+      </method>
+      <method name="Test-ConvertFromXlsCoordinates" desc="()" line="48">
+        <counter type="INSTRUCTION" missed="0" covered="6" />
+        <counter type="LINE" missed="0" covered="6" />
+        <counter type="METHOD" missed="0" covered="1" />
+      </method>
+      <counter type="INSTRUCTION" missed="0" covered="20" />
+      <counter type="LINE" missed="0" covered="17" />
+      <counter type="METHOD" missed="0" covered="5" />
+      <counter type="CLASS" missed="0" covered="1" />
+    </class>
+    <sourcefile name="convertCoordinates.ps1">
+      <line nr="11" mi="0" ci="1" mb="0" cb="0" />
+      <line nr="13" mi="0" ci="1" mb="0" cb="0" />
+      <line nr="14" mi="0" ci="2" mb="0" cb="0" />
+      <line nr="16" mi="0" ci="1" mb="0" cb="0" />
+      <line nr="20" mi="0" ci="1" mb="0" cb="0" />
+      <line nr="22" mi="0" ci="2" mb="0" cb="0" />
+      <line nr="31" mi="0" ci="1" mb="0" cb="0" />
+      <line nr="32" mi="0" ci="2" mb="0" cb="0" />
+      <line nr="35" mi="0" ci="1" mb="0" cb="0" />
+      <line nr="40" mi="0" ci="1" mb="0" cb="0" />
+      <line nr="44" mi="0" ci="1" mb="0" cb="0" />
+      <line nr="48" mi="0" ci="1" mb="0" cb="0" />
+      <line nr="49" mi="0" ci="1" mb="0" cb="0" />
+      <line nr="51" mi="0" ci="1" mb="0" cb="0" />
+      <line nr="52" mi="0" ci="1" mb="0" cb="0" />
+      <line nr="54" mi="0" ci="1" mb="0" cb="0" />
+      <line nr="55" mi="0" ci="1" mb="0" cb="0" />
+      <counter type="INSTRUCTION" missed="0" covered="20" />
+      <counter type="LINE" missed="0" covered="17" />
+      <counter type="METHOD" missed="0" covered="5" />
+      <counter type="CLASS" missed="0" covered="1" />
+    </sourcefile>
+    <counter type="INSTRUCTION" missed="0" covered="20" />
+    <counter type="LINE" missed="0" covered="17" />
+    <counter type="METHOD" missed="0" covered="5" />
+    <counter type="CLASS" missed="0" covered="1" />
+  </package>
+  <counter type="INSTRUCTION" missed="0" covered="20" />
+  <counter type="LINE" missed="0" covered="17" />
+  <counter type="METHOD" missed="0" covered="5" />
+  <counter type="CLASS" missed="0" covered="1" />
+</report>
