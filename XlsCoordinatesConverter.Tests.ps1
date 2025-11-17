@@ -1,13 +1,15 @@
-﻿# Import script
-. ./../Scripts/convertCoordinates.ps1
+﻿BeforeAll {
+    . './XlsCoordinatesConverter.ps1'
+    Write-Host "Début des tests pour ConvertFrom-XlsCoordinates..."
+}
 
 Describe "convertFrom-XlsCoordinates" {
     # Tests pour les valeurs données
     It "should convert to correct coordinates" {
-        ConvertFrom-XlsCoordinates -Cell "A1" | Should -Be @(1, 1)
-        ConvertFrom-XlsCoordinates -Cell "Cc3" | Should -Be @(81, 3)
-        ConvertFrom-XlsCoordinates -Cell "ANC34" | Should -Be @(1043, 34)
-        ConvertFrom-XlsCoordinates -Cell "XFD1048576" | Should -Be @(16384, 1048576)
+        ConvertFrom-XlsCoordinates -Cell "A1" | Should -Be @('Column = 1; Row = 1')
+        ConvertFrom-XlsCoordinates -Cell "Cc3" | Should -Be @('Column = 81; Row = 3')
+        ConvertFrom-XlsCoordinates -Cell "ANC34" | Should -Be @('Column = 1043; Row = 34')
+        ConvertFrom-XlsCoordinates -Cell "XFD1048576" | Should -Be @('Column = 16384; Row = 1048576')
     }
     
     It "should throw error for invalid cell format" {

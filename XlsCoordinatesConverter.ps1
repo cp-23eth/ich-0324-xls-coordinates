@@ -19,7 +19,7 @@
         # Tests
         Test-ConvertFromXlsCoordinates $coordinateX $row
 
-        return @($coordinateX, $row)
+        return @('Column = ' + $coordinateX + ";", 'Row = ' + $row)
     }
 }
 

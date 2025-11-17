@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE report PUBLIC "-//JACOCO//DTD Report 1.1//EN" "report.dtd"[]>
-<report name="Pester (10/27/2025 08:51:41)">
-  <sessioninfo id="this" start="1761555101536" dump="1761555101711" />
-  <package name="Scripts">
-    <class name="Scripts/convertCoordinates" sourcefilename="convertCoordinates.ps1">
+<report name="Pester (11/10/2025 09:26:59)">
+  <sessioninfo id="this" start="1762766819307" dump="1762766819403" />
+  <package name="sample-ps">
+    <class name="sample-ps/XlsCoordinatesConverter" sourcefilename="XlsCoordinatesConverter.ps1">
       <method name="ConvertFrom-XlsCoordinates" desc="()" line="11">
         <counter type="INSTRUCTION" missed="0" covered="8" />
         <counter type="LINE" missed="0" covered="6" />
@@ -34,7 +34,7 @@
       <counter type="METHOD" missed="0" covered="5" />
       <counter type="CLASS" missed="0" covered="1" />
     </class>
-    <sourcefile name="convertCoordinates.ps1">
+    <sourcefile name="XlsCoordinatesConverter.ps1">
       <line nr="11" mi="0" ci="1" mb="0" cb="0" />
       <line nr="13" mi="0" ci="1" mb="0" cb="0" />
       <line nr="14" mi="0" ci="2" mb="0" cb="0" />
