@@ -2,16 +2,19 @@ name: Build on Commit
 
 on:
   push:
-    branches: [ actions ]
+    branches:
+      - actions
 
 jobs:
   build:
     runs-on: windows-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Run PowerShell build script
-        shell: pwsh
-        run: Invoke-Build -Script ..\..\XlsCoordinatesConverter.build.ps1
+      - name: Install Invoke-Build
+        run: pwsh -Command "Install-Module -Name InvokeBuild -Force"
+
+      - name: Run build script
+        run: pwsh -Command "Import-Module Invoke-Build; Invoke-Build ."

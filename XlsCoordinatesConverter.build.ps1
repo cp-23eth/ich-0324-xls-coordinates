@@ -52,4 +52,5 @@ task Publish {
     Publish-Module -Path './release/XlsCoordinatesConverter-eth' -NuGetApiKey $apiKey;
 }
 
-task . Test, Lint, Release, Publish
+# task . Test, Lint, Release, Publish
+task . Test, Lint, Release
