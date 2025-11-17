@@ -17,4 +17,4 @@ jobs:
         run: pwsh -Command "Install-Module -Name InvokeBuild -Force"
 
       - name: Run build script
-        run: pwsh -Command "Import-Module Invoke-Build; Invoke-Build ."
+        run: pwsh -Command "Invoke-Build ."
