@@ -6,13 +6,15 @@
 # Generated on: 11/10/2025
 #
 
+./Read-EnvFile -Path './.env'
+    $module_version = $env:MODULE_VERSION
 @{
 
 # Script module or binary module file associated with this manifest.
 RootModule = './XlsCoordinatesConverter-eth.psm1'
 
 # Version number of this module.
-ModuleVersion = '1.0.7'
+ModuleVersion = "$module_version"
 
 # Supported PSEditions
 # CompatiblePSEditions = @()

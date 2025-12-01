@@ -34,6 +34,8 @@ task Release {
     $psd1SourceFilePath = "./XlsCoordinatesConverter.psd1"
     $psd1DestFilePath = "./release/XlsCoordinatesConverter-eth.psd1"
 
+    Mkdir "./release/XlsCoordinatesConverter-eth" -ErrorAction SilentlyContinue
+
     Copy-Item -Path $psm1SourceFilePath -Destination $psm1DestFilePath -Force
     Copy-Item -Path $psd1SourceFilePath -Destination $psd1DestFilePath -Force
 }
