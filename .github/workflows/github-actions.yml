@@ -1,17 +1,13 @@
 name: Build on Commit
 
-on:
-  push:
-    branches:
-      - actions
+on: [push]
 
 jobs:
   build:
     runs-on: windows-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Install Invoke-Build
         run: pwsh -Command "Install-Module -Name InvokeBuild -Force"
