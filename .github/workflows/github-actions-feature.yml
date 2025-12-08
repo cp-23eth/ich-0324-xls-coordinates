@@ -3,7 +3,7 @@ name: Build on Commit
 on:
   push:
     branches:
-      - actions
+      - feature
 
 jobs:
   build:
