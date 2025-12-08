@@ -12,5 +12,8 @@ jobs:
       - name: Install Invoke-Build
         run: pwsh -Command "Install-Module -Name InvokeBuild -Force"
 
+      - name: Install Pester
+        run: pwsh -Command "Install-Module -Name Pester -Force"
+
       - name: Run build script
         run: pwsh -Command "Invoke-Build ."
