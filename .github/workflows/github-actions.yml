@@ -1,6 +1,9 @@
 name: Build on Commit
 
-on: [push]
+on:
+  push:
+    branches:
+      - feature
 
 jobs:
   build:
@@ -8,20 +11,32 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: 9.0.x
-
-      - name: Install Invoke-Build
-        run: pwsh -Command "Install-Module -Name InvokeBuild -Force"
+    
+      - name: Install Pester
+        run: pwsh -Command "Install-Module -Name Pester -Force"
+      - name: Run Pester
+        run: pwsh -Command "Invoke-Pester -Path .\XlsCoordinatesConverter.Tests.ps1"
 
       - name: Install PSScriptAnalyser
         run: pwsh -Command "Install-Module -Name PSScriptAnalyzer -Force"
+      - name: Run PSScriptAnalyser
+        run: pwsh -Command "Invoke-ScriptAnalyzer -File .\XlsCoordinatesConverter.ps1"
 
-      - name: Install Pester
-        run: pwsh -Command "Install-Module -Name Pester -Force"
+# jobs:
+#   build:
+#     runs-on: [self-hosted, linux]
 
-      - name: Run build script
-        run: pwsh -Command "Invoke-Build ."
+#     steps:
+#       - uses: actions/checkout@v4
+
+#       - name: Install Invoke-Build
+#         run: pwsh -Command "Install-Module -Name InvokeBuild -Force"
+
+#       - name: Install PSScriptAnalyser
+#         run: pwsh -Command "Install-Module -Name PSScriptAnalyzer -Force"
+
+#       - name: Install Pester
+#         run: pwsh -Command "Install-Module -Name Pester -Force"
+
+#       - name: Run build script
+#         run: pwsh -Command "Invoke-Build ."
