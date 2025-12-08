@@ -20,7 +20,7 @@ jobs:
       - name: Install PSScriptAnalyser
         run: pwsh -Command "Install-Module -Name PSScriptAnalyzer -Force"
       - name: Run PSScriptAnalyser
-        run: pwsh -Command "Invoke-ScriptAnalyzer -File .\XlsCoordinatesConverter.ps1"
+        run: pwsh -Command "Invoke-ScriptAnalyzer -Path .\XlsCoordinatesConverter.ps1"
 
 # jobs:
 #   build:
