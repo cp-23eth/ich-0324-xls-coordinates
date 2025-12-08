@@ -12,6 +12,9 @@ jobs:
       - name: Install Invoke-Build
         run: pwsh -Command "Install-Module -Name InvokeBuild -Force"
 
+      - name: Install PSScriptAnalyser
+        run: pwsh -Command "Install-Module -Name PSScriptAnalyzer -Force"
+
       - name: Install Pester
         run: pwsh -Command "Install-Module -Name Pester -Force"
 
