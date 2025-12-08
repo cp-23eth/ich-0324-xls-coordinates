@@ -27,7 +27,7 @@ task Lint {
     }
 }
 
-task Release {
+task Build {
     $psm1SourceFilePath = "./XlsCoordinatesConverter.ps1"
     $psm1DestFilePath = "./release/XlsCoordinatesConverter-eth.psm1"
 
@@ -54,5 +54,6 @@ task Publish {
     Publish-Module -Path './release/XlsCoordinatesConverter-eth' -NuGetApiKey $apiKey;
 }
 
-# task . Test, Lint, Release, Publish
-task . Test, Lint, Release
+task . Test, Lint, Build, Publish
+task feature Test, Lint
+task develop Test, Lint, Build

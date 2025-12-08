@@ -1,0 +1,22 @@
+name: Build on Commit
+
+on:
+  push:
+    branches:
+      - actions
+
+jobs:
+  build:
+    runs-on: [self-hosted, linux]
+
+    steps:
+      - uses: actions/checkout@v4
+    
+      - name: Install Pester
+        run: pwsh -Command "Install-Module -Name Pester -Force"
+
+      - name: Install PSScriptAnalyser
+        run: pwsh -Command "Install-Module -Name PSScriptAnalyzer -Force"
+
+      - name: Run Invoke-Build (Test, Lint)
+        run: pwsh -Command "Invoke-Build ."
