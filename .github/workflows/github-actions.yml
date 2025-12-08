@@ -3,6 +3,23 @@ name: Build on Commit
 on: [push]
 
 jobs:
+  test:
+    runs-on: [self-hosted, linux]
+    steps:
+      - name: test module
+        id: test_module
+        uses: zyborg/pester-tests-report@v1
+        with:
+          report_name: XlsCoordinatesConverter.Tests
+          report_title: My Module Tests
+          github_token: ${{ secrets.TOKEN }}
+      - name: dump test results
+        shell: pwsh
+        run: |
+          Write-Host 'Total Tests Executed...:  ${{ steps.XlsCoordinatesConverter.Tests.outputs.total_count }}'
+          Write-Host 'Total Tests PASSED.....:  ${{ steps.XlsCoordinatesConverter.Tests.outputs.passed_count }}'
+          Write-Host 'Total Tests FAILED.....:  ${{ steps.XlsCoordinatesConverter.Tests.outputs.failed_count }}'
+
   build:
     runs-on: [self-hosted, linux]
 
